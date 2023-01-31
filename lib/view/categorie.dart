@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:rika/util/data/categorieData.dart';
 import 'package:rika/util/image.dart';
+import 'package:rika/view/product.dart';
 import 'package:rika/view/widget/BottonNav.dart';
 import 'package:rika/view/widget/stackcategorie.dart';
+
 
 class Categorie extends StatelessWidget {
   const Categorie({Key? key, this.range}) : super(key: key);
@@ -23,7 +26,9 @@ class Categorie extends StatelessWidget {
                 child: CircleAvatar(
                   backgroundColor: Colors.black,
                   child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.back();
+                    },
                     icon: Image.asset(Images.back),
                   ),
                 ),
@@ -53,9 +58,18 @@ class Categorie extends StatelessWidget {
                 itemCount:CategorieData.length ,
                 itemBuilder: (context, index) {
                   return StackCategorie(
-                      image: CategorieData[index].image,
-                      title: CategorieData[index].title,
-                      subtitle: CategorieData[index].subtitle);
+                    onTap: () {
+                        Get.to(ProductCategorie(
+                          category:CategorieData[index]["name"] ,
+                        price:CategorieData[index]["price"] ,
+                          image: CategorieData[index]["image"] ,
+                          products: CategorieData[index]["products"] ,
+                        ));
+
+                    },
+                      image: CategorieData[index]['image'],
+                      title: CategorieData[index]['name'],
+                      subtitle: CategorieData[index]['count']);
                 },
               ),
             )

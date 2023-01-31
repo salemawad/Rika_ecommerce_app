@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:rika/util/data/Productdata.dart';
 import 'package:rika/view/widget/productlist.dart';
 
-import '../../util/colors.dart';
 
 class ArrivalsList extends StatelessWidget {
   const ArrivalsList({Key? key}) : super(key: key);
@@ -16,12 +15,13 @@ class ArrivalsList extends StatelessWidget {
       child: ListView.builder(
         padding: const EdgeInsets.all(5),
         scrollDirection: Axis.horizontal,
-        itemCount: ProductData.length,
+        itemCount: ArrivalData.length,
         itemBuilder: (BuildContext context, int i) {
-          return ProductList(image: ProductData[i].image,
-          title:ProductData[i].title ,
-            subtitle: ProductData[i].subtitle,
-            price: ProductData[i].price,
+          return ProductList(image: ArrivalData[i].image,
+          title:ArrivalData[i].title ,
+            subtitle: ArrivalData[i].subtitle,
+            price: ArrivalData[i].price,
+            onTap: () {  },
           );
         },
          )

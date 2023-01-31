@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:rika/productDetail.dart';
 import 'package:rika/view/Home.dart';
 import 'package:rika/view/auth/login.dart';
 import 'package:rika/view/auth/signUp.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: "/",
       getPages: [
-        GetPage(name: "/", page: ()=> const ProductCategorie()),
+        GetPage(name: "/", page: ()=> const Splash()),
         GetPage(name: "/selectLogin", page: ()=> const SelectLogin()),
         GetPage(name: "/onBoarding_one", page: ()=> const OnBoardingOne()),
         GetPage(name: "/login", page: ()=> const LogIn()),
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/home", page: ()=> const Home()),
         GetPage(name: "/categories", page: ()=> const Categorie()),
         GetPage(name: "/productcategorie", page: ()=> const ProductCategorie()),
+        GetPage(name: "/product_detail", page: ()=> const ProductDetail()),
       ],
 
     );

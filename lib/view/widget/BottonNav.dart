@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rika/util/image.dart';
 
 class AllBottomNav extends StatelessWidget {
-  const AllBottomNav({Key? key,}) : super(key: key);
-  // final void Function(int) onTap ;
+  const AllBottomNav({Key? key, }) : super(key: key);
+  // final void Function(int)? onTap ;
+  // final int? current;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,33 +24,33 @@ class AllBottomNav extends StatelessWidget {
       height: 70,
       width: double.infinity,
       child: BottomNavigationBar(
+        // currentIndex: current!,
+        // onTap:onTap ,
         items: const [
         BottomNavigationBarItem(
             icon: Icon(
-              Icons.home,color: Colors.black,
+              Icons.home,
             ),
             label: "Home",),
         BottomNavigationBarItem(
             icon: Icon(
-              Icons.shopping_cart,color: Colors.black
+              Icons.shopping_cart,
             ),
             label: "Cart",),
         BottomNavigationBarItem(
             icon: Icon(
-              Icons.notification_important_rounded,color: Colors.black
+              Icons.notification_important_rounded,
             ),
             label: "notify",),
         BottomNavigationBarItem(
             icon: Icon(
-              Icons.person,color: Colors.black
+              Icons.person,
             ),
             label: "profile",),
       ],
-        backgroundColor: Colors.white,
+        selectedItemColor: Colors.blue,
         showSelectedLabels: false,
-        showUnselectedLabels: false,
-        selectedLabelStyle: TextStyle(color: Colors.black),
-        selectedItemColor: Color(0xEEEEEEEE),
+        unselectedItemColor: Colors.black,
       ),
     );
   }

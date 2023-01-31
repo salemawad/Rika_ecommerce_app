@@ -2,7 +2,7 @@ import 'package:rika/util/image.dart';
 
 import '../../model/productmodel.dart';
 
-List<ProductModel> ProductData = [
+List<ProductModel> ArrivalData = [
   ProductModel(
       Images.arrivalsone,
       "The Marc Jacobs",
