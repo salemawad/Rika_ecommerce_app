@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rika/productDetail.dart';
+import 'package:rika/profile.dart';
 import 'package:rika/view/Home.dart';
 import 'package:rika/view/auth/login.dart';
 import 'package:rika/view/auth/signUp.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/categories", page: ()=> const Categorie()),
         GetPage(name: "/productcategorie", page: ()=> const ProductCategorie()),
         GetPage(name: "/product_detail", page: ()=> const ProductDetail()),
+        GetPage(name: "/profile", page: ()=> const Profile()),
       ],
 
     );

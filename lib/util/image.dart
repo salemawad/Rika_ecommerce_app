@@ -28,6 +28,7 @@ class Images{
   static const String onboarding1 = "$msar/onboarding1.png";
   static const String onboarding2 = "$msar/onboarding2.png";
   static const String onboarding3 = "$msar/onboarding3.png";
+  static const String imageProfile = "$msar/imageProfile.png";
 
   static const String  ms = "assets/product";
 

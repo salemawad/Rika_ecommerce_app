@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AllBottomNav extends StatelessWidget {
-  const AllBottomNav({Key? key, }) : super(key: key);
-  // final void Function(int)? onTap ;
-  // final int? current;
+  const AllBottomNav({Key? key, this.onTap, this.current, }) : super(key: key);
+  final void Function(int)? onTap ;
+  final int? current;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,8 +24,8 @@ class AllBottomNav extends StatelessWidget {
       height: 70,
       width: double.infinity,
       child: BottomNavigationBar(
-        // currentIndex: current!,
-        // onTap:onTap ,
+        currentIndex: current!,
+        onTap:onTap ,
         items: const [
         BottomNavigationBarItem(
             icon: Icon(
@@ -34,23 +34,23 @@ class AllBottomNav extends StatelessWidget {
             label: "Home",),
         BottomNavigationBarItem(
             icon: Icon(
-              Icons.shopping_cart,
+              Icons.category,
             ),
-            label: "Cart",),
+            label: "Categories",),
         BottomNavigationBarItem(
             icon: Icon(
-              Icons.notification_important_rounded,
+              Icons.shopping_cart,
             ),
-            label: "notify",),
+            label: "cart",),
         BottomNavigationBarItem(
             icon: Icon(
               Icons.person,
             ),
             label: "profile",),
       ],
-        selectedItemColor: Colors.blue,
+        selectedItemColor: Colors.black,
         showSelectedLabels: false,
-        unselectedItemColor: Colors.black,
+        unselectedItemColor: Colors.black54,
       ),
     );
   }

@@ -15,11 +15,7 @@ class AllAppBar extends StatelessWidget {
         leading: CircleAvatar(
             backgroundColor: Colors.black,
             child: Image.asset(Images.menu,)),
-        actions: [
-          CircleAvatar(
-              backgroundColor: Color(0xDDDDDDDD),
-              child:  Image.asset(Images.profile)),
-        ],
+
       ),
     );
   }
